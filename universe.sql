@@ -283,6 +283,14 @@ ALTER TABLE ONLY public.ufo
 
 
 --
+-- Name: ufo type; Type: FK CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.ufo
+    ADD CONSTRAINT type FOREIGN KEY (type) REFERENCES public.galaxy(type);
+
+
+--
 -- PostgreSQL database dump complete
 --
 
