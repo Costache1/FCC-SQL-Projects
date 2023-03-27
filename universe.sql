@@ -112,6 +112,20 @@ CREATE TABLE public.star (
 ALTER TABLE public.star OWNER TO freecodecamp;
 
 --
+-- Name: ufo; Type: TABLE; Schema: public; Owner: freecodecamp
+--
+
+CREATE TABLE public.ufo (
+    type integer NOT NULL,
+    dimensions integer NOT NULL,
+    ufo_id integer NOT NULL,
+    name character varying(30)
+);
+
+
+ALTER TABLE public.ufo OWNER TO freecodecamp;
+
+--
 -- Data for Name: galaxy; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
@@ -127,12 +141,44 @@ INSERT INTO public.galaxy VALUES (6, '6', false, false, '1', 99999, 6);
 -- Data for Name: moon; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.moon VALUES (1, '2', '1', 1, 10000, 1, 1);
+INSERT INTO public.moon VALUES (2, '2', '1', 10000, 1, 1, 2);
+INSERT INTO public.moon VALUES (3, '2', '1', 10000, 1, 1, 3);
+INSERT INTO public.moon VALUES (4, '2', '1', 10000, 1, 1, 4);
+INSERT INTO public.moon VALUES (5, '2', '1', 10000, 1, 1, 5);
+INSERT INTO public.moon VALUES (6, '2', '1', 10000, 1, 1, 6);
+INSERT INTO public.moon VALUES (7, '2', '1', 10000, 1, 1, 7);
+INSERT INTO public.moon VALUES (8, '2', '1', 10000, 1, 1, 8);
+INSERT INTO public.moon VALUES (9, '2', '1', 10000, 1, 1, 9);
+INSERT INTO public.moon VALUES (10, '2', '1', 10000, 1, 1, 10);
+INSERT INTO public.moon VALUES (11, '2', '1', 10000, 1, 1, 11);
+INSERT INTO public.moon VALUES (12, '2', '1', 10000, 1, 1, 12);
+INSERT INTO public.moon VALUES (13, '2', '1', 10000, 1, 1, 13);
+INSERT INTO public.moon VALUES (14, '2', '1', 10000, 1, 1, 14);
+INSERT INTO public.moon VALUES (15, '2', '1', 10000, 1, 1, 15);
+INSERT INTO public.moon VALUES (16, '2', '1', 10000, 1, 1, 16);
+INSERT INTO public.moon VALUES (17, '2', '1', 10000, 1, 1, 17);
+INSERT INTO public.moon VALUES (18, '2', '1', 10000, 1, 1, 18);
+INSERT INTO public.moon VALUES (19, '2', '1', 10000, 1, 1, 19);
+INSERT INTO public.moon VALUES (20, '2', '1', 10000, 1, 1, 20);
 
 
 --
 -- Data for Name: planet; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.planet VALUES (1, '1', 1, 1, 10000, '1', 1);
+INSERT INTO public.planet VALUES (2, '2', 1, 1, 10000, '1', 2);
+INSERT INTO public.planet VALUES (3, '2', 1, 1, 10000, '1', 3);
+INSERT INTO public.planet VALUES (4, '2', 1, 1, 10000, '1', 4);
+INSERT INTO public.planet VALUES (5, '2', 1, 1, 10000, '1', 5);
+INSERT INTO public.planet VALUES (6, '2', 1, 1, 10000, '1', 6);
+INSERT INTO public.planet VALUES (7, '2', 1, 1, 10000, '1', 7);
+INSERT INTO public.planet VALUES (8, '2', 1, 1, 10000, '1', 8);
+INSERT INTO public.planet VALUES (9, '2', 1, 1, 10000, '1', 9);
+INSERT INTO public.planet VALUES (10, '2', 1, 1, 10000, '1', 10);
+INSERT INTO public.planet VALUES (11, '2', 1, 1, 10000, '1', 11);
+INSERT INTO public.planet VALUES (12, '2', 1, 1, 10000, '1', 12);
 
 
 --
@@ -145,6 +191,15 @@ INSERT INTO public.star VALUES (3, '3', 9999, '3', 3, 3, 3);
 INSERT INTO public.star VALUES (4, '4', 103324325, '4', 4, 4, 4);
 INSERT INTO public.star VALUES (5, '5', 1035, '5', 5, 5, 5);
 INSERT INTO public.star VALUES (6, '6', 1009099, '6', 6, 6, 6);
+
+
+--
+-- Data for Name: ufo; Type: TABLE DATA; Schema: public; Owner: freecodecamp
+--
+
+INSERT INTO public.ufo VALUES (1, 20000, 1, NULL);
+INSERT INTO public.ufo VALUES (2, 1000, 2, NULL);
+INSERT INTO public.ufo VALUES (3, 19999, 3, NULL);
 
 
 --
@@ -212,5 +267,22 @@ ALTER TABLE ONLY public.star
 
 
 --
+-- Name: ufo ufo_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.ufo
+    ADD CONSTRAINT ufo_pkey PRIMARY KEY (ufo_id);
+
+
+--
+-- Name: ufo ufo_type_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.ufo
+    ADD CONSTRAINT ufo_type_key UNIQUE (type);
+
+
+--
 -- PostgreSQL database dump complete
 --
+
