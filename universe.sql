@@ -48,7 +48,7 @@ SET default_table_access_method = heap;
 --
 
 CREATE TABLE public.galaxy (
-    galaxyid integer NOT NULL,
+    galaxy_id integer NOT NULL,
     name character varying(60) NOT NULL,
     distance boolean NOT NULL,
     single boolean NOT NULL,
@@ -65,7 +65,7 @@ ALTER TABLE public.galaxy OWNER TO freecodecamp;
 --
 
 CREATE TABLE public.moon (
-    moonid integer NOT NULL,
+    moon_id integer NOT NULL,
     name character varying(60) NOT NULL,
     description text NOT NULL,
     dimensions numeric NOT NULL,
@@ -82,7 +82,7 @@ ALTER TABLE public.moon OWNER TO freecodecamp;
 --
 
 CREATE TABLE public.planet (
-    planetid integer NOT NULL,
+    planet_id integer NOT NULL,
     name character varying(60) NOT NULL,
     single integer NOT NULL,
     distance numeric NOT NULL,
@@ -99,7 +99,7 @@ ALTER TABLE public.planet OWNER TO freecodecamp;
 --
 
 CREATE TABLE public.star (
-    starid integer NOT NULL,
+    star_id integer NOT NULL,
     name character varying(60) NOT NULL,
     dimensions numeric NOT NULL,
     description text NOT NULL,
@@ -118,6 +118,9 @@ ALTER TABLE public.star OWNER TO freecodecamp;
 INSERT INTO public.galaxy VALUES (1, '1', true, true, '1', 1000000, 1);
 INSERT INTO public.galaxy VALUES (2, '2', true, true, '2', 10000, 2);
 INSERT INTO public.galaxy VALUES (3, '3', true, true, '12', 90000, 3);
+INSERT INTO public.galaxy VALUES (4, '4', true, true, '1', 0, 4);
+INSERT INTO public.galaxy VALUES (5, '5', false, true, '2', 10, 5);
+INSERT INTO public.galaxy VALUES (6, '6', false, false, '1', 99999, 6);
 
 
 --
@@ -136,6 +139,12 @@ INSERT INTO public.galaxy VALUES (3, '3', true, true, '12', 90000, 3);
 -- Data for Name: star; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.star VALUES (1, '1', 878789, '1', 1, 1, 1);
+INSERT INTO public.star VALUES (2, '2', 100000, '2', 2, 2, 2);
+INSERT INTO public.star VALUES (3, '3', 9999, '3', 3, 3, 3);
+INSERT INTO public.star VALUES (4, '4', 103324325, '4', 4, 4, 4);
+INSERT INTO public.star VALUES (5, '5', 1035, '5', 5, 5, 5);
+INSERT INTO public.star VALUES (6, '6', 1009099, '6', 6, 6, 6);
 
 
 --
@@ -143,7 +152,7 @@ INSERT INTO public.galaxy VALUES (3, '3', true, true, '12', 90000, 3);
 --
 
 ALTER TABLE ONLY public.galaxy
-    ADD CONSTRAINT galaxy_pkey PRIMARY KEY (galaxyid);
+    ADD CONSTRAINT galaxy_pkey PRIMARY KEY (galaxy_id);
 
 
 --
@@ -159,7 +168,7 @@ ALTER TABLE ONLY public.galaxy
 --
 
 ALTER TABLE ONLY public.moon
-    ADD CONSTRAINT moon_pkey PRIMARY KEY (moonid);
+    ADD CONSTRAINT moon_pkey PRIMARY KEY (moon_id);
 
 
 --
@@ -175,7 +184,7 @@ ALTER TABLE ONLY public.moon
 --
 
 ALTER TABLE ONLY public.planet
-    ADD CONSTRAINT planet_pkey PRIMARY KEY (planetid);
+    ADD CONSTRAINT planet_pkey PRIMARY KEY (planet_id);
 
 
 --
@@ -191,7 +200,7 @@ ALTER TABLE ONLY public.planet
 --
 
 ALTER TABLE ONLY public.star
-    ADD CONSTRAINT star_pkey PRIMARY KEY (starid);
+    ADD CONSTRAINT star_pkey PRIMARY KEY (star_id);
 
 
 --
@@ -205,4 +214,3 @@ ALTER TABLE ONLY public.star
 --
 -- PostgreSQL database dump complete
 --
-
